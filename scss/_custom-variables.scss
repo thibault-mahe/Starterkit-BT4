@@ -1,0 +1,18 @@
+//
+// Custom Variables
+// --------------------------------------------------
+
+// Navbar
+$navbar-height: calc-rem(50px);
+
+
+//
+// Functions
+// --------------------------------------------------
+
+
+$font-size-root:             16px !default; //bootstrap default value
+
+@function calc-rem( $target, $context: $font-size-root ) {
+	@return $target / $context * 1rem;
+}

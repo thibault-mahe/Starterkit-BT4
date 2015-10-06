@@ -1,0 +1,10 @@
+// Typography
+// --------------------------
+
+a {
+	@include transition(color);
+	&:hover,
+	&:focus {
+	    text-decoration: none;
+	}
+}

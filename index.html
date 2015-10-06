@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Starterkit-BT4</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+	<link rel="canonical" href="http://" />
+	<link rel="icon" type="image/png" href="" />
+	<link rel="apple-touch-icon" href="" />
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://" />
+	<meta property="og:image" content="" />
+
+	<style>
+		/* Insert critical css here (see css/critical/..) */
+	</style>
+
+	<script>
+		/*!
+		loadCSS: load a CSS file asynchronously.
+		[c]2015 @scottjehl, Filament Group, Inc.
+		Licensed MIT
+		*/
+		(function(w){
+			"use strict";
+			w.loadCSS = function( href, before, media ){
+				var ss = w.document.createElement( "link" );
+				var ref;
+				if( before ){
+					ref = before;
+				}
+				else if( w.document.querySelectorAll ){
+					var refs = w.document.querySelectorAll(  "style,link[rel=stylesheet],script" );
+					ref = refs[ refs.length - 1];
+				}
+				else {
+					ref = w.document.getElementsByTagName( "script" )[ 0 ];
+				}
+				var sheets = w.document.styleSheets;
+				ss.rel = "stylesheet";
+				ss.href = href;
+				ss.media = "only x";
+				ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+				ss.onloadcssdefined = function( cb ){
+					var defined;
+					for( var i = 0; i < sheets.length; i++ ){
+						if( sheets[ i ].href && sheets[ i ].href === ss.href ){
+							defined = true;
+						}
+					}
+					if( defined ){
+						cb();
+					} else {
+						setTimeout(function() {
+							ss.onloadcssdefined( cb );
+						});
+					}
+				};
+				ss.onloadcssdefined(function() {
+					ss.media = media || "all";
+				});
+				return ss;
+			};
+		}(this));
+		loadCSS( "css/main.css" );
+	</script>
+
+	<!--[if lte IE 9 ]>
+		<script type="text/javascript" src="js/Starterkit-BT4-1.0.0-ie-support.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	<header>
+		<div class="skip-nav">
+			<ul>
+				<li><a href="#navigation">Aller au menu</a></li>
+				<li><a href="#content" accesskey="s">Aller au contenu</a></li>
+				<li><a href="#search" accesskey="4">Aller à la recherche</a></li>
+			</ul>
+		</div>
+
+		<nav class="navbar" role="navigation">
+			<div class="container">
+			<button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#navbar-toggle">
+				&#9776;
+					<span class="sr-only">Toggle navigation</span>
+				</button>
+				<a class="navbar-brand" href="#"><i class="fa fa-flask"></i> Starterkit-BT4</a>
+
+				<div class="collapse navbar-toggleable-sm" id="navbar-toggle">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="nav-item">
+							<a href="#" class="nav-link" title="">Link</a>
+						</li>
+						<li class="nav-item active">
+							<a href="#" class="nav-link" title="">Link</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a href="#" title="" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Link </a>
+							<ul class="dropdown-menu dropdown-menu-left">
+								<li>
+									<a class="dropdown-item" href="#">Sublink</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#">Sublink</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#">Sublink</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#">Sublink</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#">Sublink</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#">Sublink</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link" title="">Link</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section>
+
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+
+			<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+
+			<blockquote>
+				<p>Blockquote : Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+			</blockquote>
+
+
+			<button type="button" class="btn btn-primary-outline">Primary</button>
+			<button type="button" class="btn btn-secondary-outline">Secondary</button>
+			<button type="button" class="btn btn-success-outline">Success</button>
+			<button type="button" class="btn btn-warning-outline">Warning</button>
+			<button type="button" class="btn btn-danger-outline">Danger</button>
+
+			<br>
+			<br>
+
+			<div class="alert alert-success" role="alert">
+				<strong>Well done!</strong> You successfully read this important alert message.
+			</div>
+			<div class="alert alert-info" role="alert">
+				<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+			</div>
+			<div class="alert alert-warning" role="alert">
+				<strong>Warning!</strong> Better check yourself, you're not looking too good.
+			</div>
+			<div class="alert alert-danger" role="alert">
+				<strong>Oh snap!</strong> Change a few things up and try submitting again.
+			</div>
+
+
+		</section>
+	</main>
+
+	<footer></footer>
+
+	<script type="text/javascript" src="dist/Starterkit-BT4-1.0.0.js"></script>
+
+	<script type="text/javascript">
+	  var $buoop = {vs:{i:8,f:20,o:17,s:6},reminder:0};
+	  $buoop.ol = window.onload;
+	  window.onload=function(){
+		try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+		var e = document.createElement("script");
+		e.setAttribute("type", "text/javascript");
+		e.setAttribute("src", "//browser-update.org/update.js");
+		document.body.appendChild(e);
+	  }
+	</script>
+
+</body>
+</html>
