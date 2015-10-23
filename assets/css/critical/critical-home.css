@@ -2,7 +2,7 @@ html{ font-family: sans-serif; }
 body{ margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
  footer, header, main, nav, section{ display: block; }
 a{ background-color: transparent; }
- strong{ font-weight: bold; }
+b, strong{ font-weight: bold; }
 h1{ font-size: 2em; margin-top: 0.67em; margin-right: 0px; margin-bottom: 0.67em; margin-left: 0px; }
 button{ color: inherit; font: inherit; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
 button{ overflow-x: visible; overflow-y: visible; }
