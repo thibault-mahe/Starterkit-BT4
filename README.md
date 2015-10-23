@@ -6,6 +6,7 @@ A starter kit for your web project based on Bootstrap 4, with grunt and bower
 
 - **Bootstrap 4 (alpha version, [see documentation](http://v4-alpha.getbootstrap.com/getting-started/introduction/))**
 - **SASS**
+- **Font Awesome**
 - **Respond.JS**
 - **html5shiv**
 - **Grunt**
